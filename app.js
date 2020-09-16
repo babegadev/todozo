@@ -68,7 +68,7 @@ passport.use(
     {
       clientID: process.env.CLIENT_ID,
       clientSecret: process.env.CLIENT_SECRET,
-      callbackURL: "http://localhost:3000/auth/google/todos",
+      callbackURL: process.env.CALLBACK_URL,
       userProfileURL: "https://www.googleapis.com/oauth2/v3/userinfo",
     },
     (accessToken, refreshToken, profile, cb) => {
