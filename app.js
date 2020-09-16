@@ -3,6 +3,7 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const session = require("express-session");
 const passport = require("passport");
+const secure = require("ssl-express-www");
 const passportLocalMongoose = require("passport-local-mongoose");
 const GoogleStrategy = require("passport-google-oauth20").Strategy;
 const findOrCreate = require("mongoose-findorcreate");
@@ -10,6 +11,7 @@ require("dotenv").config();
 
 const app = express();
 app.set("view engine", "ejs");
+app.use(secure);
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(
