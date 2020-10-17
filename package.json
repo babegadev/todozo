@@ -1,10 +1,10 @@
 {
-  "name": "todo_auth",
+  "name": "todozo",
   "version": "1.0.0",
   "description": "Todo app with OAuth",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js"
   },
   "author": "Alang Babega",
   "license": "ISC",
